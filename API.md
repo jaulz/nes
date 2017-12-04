@@ -184,9 +184,9 @@ Declares a subscription path client can subscribe to where:
                 - `'user'`
                 - `'app'`
                 - `'any'`
-            - `index` - if `true`, authenticated socket with `user` property in `credentials` are
-              mapped for usage in [`server.publish()`](#serverpublishpath-message-options) calls.
-              Defaults to `false`.
+            - `index` - the key property in `credentials` that is mapped
+              for usage in [`server.publish()`](#serverpublishpath-message-options) calls. 
+              If `true`, the key property is `user`. Defaults to `false`.
     - `onSubscribe` - a method called when a client subscribes to this subscription endpoint using
       the signature `async function(socket, path, params)` where:
         - `socket` - the [`Socket`](#socket) object of the incoming connection.
